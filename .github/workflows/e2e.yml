@@ -28,7 +28,7 @@ jobs:
           CURRENTS_RECORD_KEY: ${{ secrets.CURRENTS_RECORD_KEY }}
           CURRENTS_PROJECT_ID: ${{ secrets.CURRENTS_PROJECT_ID }}
           DEBUG: "currents*"
-          NO_PROXY: cy.currents.dev
+          NO_PROXY: .currents.dev,.r2.cloudflarestorage.com
         run: pnpm --filter=n8n-playwright test:local tests/e2e/workflows/editor/expressions/nullish-coalescing.spec.ts
 
       - name: Upload Playwright report
